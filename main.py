@@ -10,7 +10,8 @@ bearer_token = keys.bearer_token
 
 
 def get_content():
-    content = 'Questo è un test, sono UN NUOVO un tweet generato tramite Tweepy! (Ma Teodoro non si è laureato)'
+    content = ('Questo è un test, sono UN NUOVO un tweet generato tramite Tweepy! (Ma Teodoro non si è laureato). Sto '
+               'testando un commit tramite terminale.')
     return content
 
 
@@ -27,7 +28,6 @@ def get_client():
 
 def tweet(message: str):
     client = get_client()
-
     client.create_tweet(text=message)
 
     print("Tweeted successfully!")
